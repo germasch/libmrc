@@ -46,6 +46,8 @@ ggcm_mhd_ic_cpaw_setup(struct ggcm_mhd_ic *ic)
   struct ggcm_mhd *mhd = ic->mhd;
   struct mrc_crds *crds = mrc_domain_get_crds(mhd->domain);
 
+  ggcm_mhd_ic_setup_super(ic);
+  
   sub->cA = sub->B0 / sqrt(sub->rr0);
   sub->cs = sqrt(mhd->par.gamm * sub->pp0 / sub->rr0);
   const double *lo = mrc_crds_lo(crds), *hi = mrc_crds_hi(crds);
