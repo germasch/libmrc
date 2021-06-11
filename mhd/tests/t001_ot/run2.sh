@@ -11,8 +11,10 @@ mpirun -n 1 ../mhd_ot \
     --mrc_ts_output_every_time .01  \
     --ggcm_mhd_diag_fields rr1:uu1:rv1:j:b1:divb:rr:pp:v:b \
     \
-    --B0 2 \
-    --theta 30 \
+    --ggcm_mhd_ic_B0 2. \
+    --ggcm_mhd_ic_theta 90. \
+    --ggcm_mhd_ic_wave fast \
+    --ggcm_mhd_ic_amp 1e-4 \
     \
     --mrc_ts_max_time 4.0 \
     --ggcm_mhd_magdiffu const \
